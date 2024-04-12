@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="a">这里内容将在你点击按钮之后发生改变</p>
+<button onclick="ck('tyc','ssf')">
+    点击这个按钮
+</button>
+<button onclick="abc()">bt</button>
+<select style="width: 200px;" onchange="why()" onkeydown="ahy()">
+    <option>a</option>
+    <option id="c">b</option>
+</select>
+<p id="pp" onmousedown="mymouse('red')" onmouseup="mymouse('blue')">
+    一旦点击就会触发事件，一直按着会触发另外一个onmousedown事件。
+</p>
+<script>
+    function mymouse(cls){
+        document.getElementById("pp").style.color = cls;
+    }
+    function ck(name1,name2){
+        var a =name1;
+        var b ="love";
+        var c =name2;
+        var d =a + b +c ;
+        return document.getElementById("a").innerHTML= d;
+    }
+    function abc(){
+        var listnames = {
+            name:'ssf',
+            age:20,
+            shengao:'168cm',
+            tiji:'55kg',
+            tuichang:'120cm',
+            type:'kawayi'
+        }
+        return alert("我老婆"+ listnames.name + "年龄" + listnames.age + "身高" +listnames["shengao"]
+        + "体重" +listnames.tiji + "是个大漂亮" + listnames["type"]);
+    }
+    function why(){
+        document.getElementById("c").innerHTML = "adc";
+    }
+    function hub(){
+        var n = "芳芳爱你";
+        document.getElementById("hub").innerHTML = n.repeat(100);
+    }
+</script>
+<p id="hub" onclick="hub()">点一下我</p>
+<button></button>
+</body>
+</html>
